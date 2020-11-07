@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <title>Your shop Shipment List</title>
+  <script type="text/javascript" src="table_script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body onload="shipmentSelect()">
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Your<span class="logo_colour">Shop</span></a></h1>
+          <h2>Customer Information Database</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Log in</a></li>
+          <li ><a href="form.html">Customer Information</a></li>
+          <li class="selected"><a href="shipmentlist.html">Shipment List</a></li>
+          <li><a href="index.html"<button onclick="logout()" class ="submit" >Log Out</button></a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="content">
+        <!-- insert the page content here -->
+        <h2>Shipment List</h2>
+        <div ></div>
+        <div class="form_settings">
+          <p id="optionSelect"><span>Shipment No </span></p>
+          <p style="padding-top: 50px"></p>
+          </div>
+          <div id="myDynamicTable">
+            <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+              <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Product List</th>
+              <th>Modify</th>
+              <th>Status</th>
+              </tr>
+              <tr>
+              <td><input type="text" id="new_name"></td>
+              <td><input type="text" id="new_phone"></td>
+              <td><input type="text" id="new_address"></td>
+              <td><input type="text" id="new_product"></td>
+              <td><input type="button" class="add" onclick="add_row();" value="Save Data"></td>
+              <td id="optionDelevery"> </td>
+              </tr>
+            </table>
+          </div>
+        <div class ="form_settings" id = "tableEnd">
+          <p><label for="password">Admin Password:</label>
+          <p><input type="password" class="form-control" id="adminPassword" name="password" maxlength="50">
+          <p style="padding-top: 15px"><span><button onclick="shipmentConferm()"  class="confermShipment" >Conferm Shipment</button></span></p> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

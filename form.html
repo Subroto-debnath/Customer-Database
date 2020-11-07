@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <title>Your shop Customer Information</title>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body onload="searchOnEnter()">
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Your<span class="logo_colour">Shop</span></a></h1>
+          <h2>Customer Information Database</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Log in</a></li>
+          <li class="selected"><a href="form.html">Customer Information</a></li>
+          <li><a href="shipmentlist.html">Shipment List</a></li>
+          <li><a href="index.html"<button onclick="logout()" class ="submit" >Log Out</button></a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="content">
+          <h1>Customer Information for Shipment</h1>
+          <div class="form_settings">
+            <p><span>Phone Number</span><input class="contact" type="text" id = "phoneNumber"/></p>
+            <p style="padding-top: 15px"><span><button id="searchButton" onclick="searchOnDatabase()"class="submit">Search</button></span></p>
+            <p style="padding-top: 50px"></p>
+            <p><span>Name</span><input class="contact" type="text" id = "customerName"/></p>
+            <p><span>Product List</span><textarea class="contact textarea" rows="8" cols="50" id= "customerProduct"></textarea></p>
+            <p><span>Address</span><textarea class="contact textarea" rows="4" cols="50" id="customerAddress"></textarea></p>
+            <p style="padding-top: 15px"><span><button id="submitButton" onclick="submitOnDatabase()"class="submit">Submit</button></span></p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

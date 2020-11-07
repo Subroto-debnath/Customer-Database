@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Your Shop</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body onload="enterToLogIn()">
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Your<span class="logo_colour">Shop</span></a></h1>
+          <h2>Customer Information Database</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li class="selected"><a href="index.html">Log in</a></li>
+          <li><a >Customer Information</a></li>
+          <li><a >Shipment List</a></li>
+          <li><a href="index.html"<button onclick="logout()" class ="submit" >Log Out</button></a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+        <!-- insert the page content here -->
+        <h1>Welcome</h1>
+        <div class="form_settings">
+         <p><label for="email"> Email:</label>
+         <p><input type="text" class="form-control" id="email_field" name="email" maxlength="50">
+         <p><label for="password"> Password:</label>
+         <p><input type="password" class="form-control" id="password_field" name="password" maxlength="50">
+         <p style="padding-top: 15px"><button  id="logInButton" onclick="login()"  class="submit" type="login">Login</button></p>
+        </div>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
